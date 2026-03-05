@@ -1,8 +1,8 @@
-# easyqr
+# Easy QR Generator
 
 Generate QR codes from the command line.
 
-## Setup
+## Setup (one time only)
 
 Create a virtual environment:
 
@@ -23,6 +23,12 @@ pip install -r requirements.txt
 ```
 
 ## Usage
+
+Activate the virtual environment:
+
+```sh
+source venv/bin/activate
+```
 
 Generate a QR code (filename is derived from the URL):
 
