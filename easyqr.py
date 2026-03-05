@@ -4,6 +4,7 @@ import os
 import re
 from urllib.parse import urlparse
 import qrcode
+from PIL import Image
 
 
 def filename_from_url(url):
@@ -29,7 +30,21 @@ def main():
     if not output.endswith(".png"):
         output += ".png"
 
-    img = qrcode.make(url, box_size=10)
+    os.makedirs("output", exist_ok=True)
+    output = os.path.join("output", output)
+
+    TARGET_SIZE = 1024
+
+    img = qrcode.make(
+        url,
+        error_correction=qrcode.constants.ERROR_CORRECT_H,
+        box_size=20,
+        border=1,
+    )
+    img = img.get_image().resize(
+        (TARGET_SIZE, TARGET_SIZE),
+        Image.Resampling.NEAREST,
+    )
     img.save(output)
     print(f"QR code saved to {output}")
 

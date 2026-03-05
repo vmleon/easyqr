@@ -49,16 +49,19 @@ Generate a QR code (filename is derived from the URL):
 
 ```sh
 python easyqr.py "https://example.com/my-page"
-# -> my-page.png
+# -> output/my-page.png
 ```
 
 ```sh
 python easyqr.py "https://example.com"
-# -> example.png
+# -> output/example.png
 ```
 
 Specify a custom filename:
 
 ```sh
 python easyqr.py "https://example.com" my-code.png
+# -> output/my-code.png
 ```
+
+The `output/` folder is created automatically if it doesn't exist.
