@@ -2,7 +2,22 @@
 
 Generate QR codes from the command line.
 
+## Requirements
+
+- [Python 3](https://www.python.org/downloads/)
+- [Git](https://git-scm.com/downloads)
+
 ## Setup (one time only)
+
+Clone the repository:
+
+```sh
+git clone https://github.com/vmleon/easyqr.git
+```
+
+```sh
+cd easyqr
+```
 
 Create a virtual environment:
 
